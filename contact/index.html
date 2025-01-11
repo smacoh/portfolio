@@ -6,7 +6,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <nav>
+    <nav class="menu">
         <a href="/portfolio/">Main Page</a>
         <a href="/portfolio/contact/">Contact</a>
         <a href="/portfolio/projects/">Projects</a>
@@ -14,15 +14,12 @@
     </nav>
     <h1>Contact</h1>
     <form action="mailto:sjc006@ucsd.edu" method="POST" enctype="text/plain">
-        <label for="email">
-            Email Address: <input type="email" id="email" name="email"><br>
-        </label>
-        <label for="subject">
-            Subject: <input id="email" name="subject"><br>
-        </label>
-        <label for="body">
-            Body: <textarea id="body" name="body"></textarea>
-        </label>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        <label for="subject">Subject:</label>
+        <input id="email" name="subject">
+        <label for="body">Body:</label>
+        <textarea id="body" name="body"></textarea>
         <button>Submit</button>
     </form>
 </body>
