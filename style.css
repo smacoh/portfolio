@@ -100,3 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-header {
   text-align: center;
 }
+
+#resume article time {
+  float: right;
+}
