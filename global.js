@@ -4,24 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// // CODE FOR STEP 2. CAN DELETE:
-// let navLinks = $$("nav a");
-
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname
-// );
-
-// console.log([1, 2, 3, 4].find(n => n > 2))
-// console.log(navLinks)
-// console.log(currentLink)
-
-// if (currentLink) {
-//     // or if (currentLink !== undefined)
-//     currentLink.classList.add('current');
-// }
-
-
-
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
