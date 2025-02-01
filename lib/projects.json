@@ -2,25 +2,25 @@
     {
         "title": "Project 1: Expository Visualization",
         "year": "2025",
-        "image": "/images/DSC 106 - Project 1.png",
+        "image": "/portfolio/images/DSC 106 - Project 1.png",
         "description": "I designed an expository visualization."
     },
     {
         "title": "Project 2: Deceptive Visualization",
         "year": "2025",
-        "image": "/images/DSC 106 - Project 2.png",
+        "image": "/portfolio/images/DSC 106 - Project 2.png",
         "description": "I desgined a deceptive vizualization."
     },
     {
         "title": "League of Legends: The Impact of Objectives on Game Results",
         "year": "2024",
-        "image": "/images/league-of-legends.webp",
+        "image": "/portfolio/images/league-of-legends.webp",
         "description": "I analyzed a league of legends dataset."
     },
     {
         "title": "Analyzing the Impact of Character Types on Animated Movie Success",
         "year": "2024",
-        "image": "/images/pixar.jpg",
+        "image": "/portfolio/images/pixar.jpg",
         "description": "I Analyzed a Pixar Movie Dataset"
     },
     {
