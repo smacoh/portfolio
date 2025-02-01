@@ -119,3 +119,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 80%;
   font-family: inherit;
 }
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  text-align: center;
+  justify-items: center;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  font-size: 2rem;
+  text-align: center;
+  justify-items: center;
+}
+
+.projects img {
+  width: 100%;         /* Make the images fill their container */
+  height: 200px;       /* Set a fixed height for the images */
+  object-fit: cover;   /* Ensure the image covers the area without distortion */
+  border-radius: 8px;  /* Optional: Add rounded corners to the images */
+}

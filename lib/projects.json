@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Project 1: Expository Visualization",
+        "year": "2025",
+        "image": "../images/DSC 106 - Project 1.png",
+        "description": "I designed an expository visualization."
+    },
+    {
+        "title": "Project 2: Deceptive Visualization",
+        "year": "2025",
+        "image": "../images/DSC 106 - Project 2.png",
+        "description": "I desgined a deceptive vizualization."
+    },
+    {
+        "title": "League of Legends: The Impact of Objectives on Game Results",
+        "year": "2024",
+        "image": "../images/league-of-legends.webp",
+        "description": "I analyzed a league of legends dataset."
+    },
+    {
+        "title": "Analyzing the Impact of Character Types on Animated Movie Success",
+        "year": "2024",
+        "image": "../images/pixar.jpg",
+        "description": "I Analyzed a Pixar Movie Dataset"
+    },
+    {
+        "title": "Doloribus ipsum vel perferendis!",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Impedit explicabo, quas quae tempore quasi eum nesciunt. Neque commodi perferendis aperiam illum earum, asperiores magnam facilis officiis reprehenderit fuga eos possimus molestias modi sint doloribus voluptatum. Tempora, at et!"
+    },
+    {
+        "title": "Fugiat vel hic quos.",
+        "year": "2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aperiam tempore cum numquam inventore magni et ea asperiores optio vitae commodi. Perspiciatis fugit doloremque ipsum fugiat ad aut quas vel perferendis iste. Quae omnis cumque optio laborum autem ut?"
+    },
+    {
+        "title": "Sint iste incidunt illum.",
+        "year": "2020",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Iusto reprehenderit fugit, dignissimos minus quo laborum exercitationem rerum. Quae tempora omnis voluptas cumque veritatis placeat, enim, quam libero sapiente repellendus molestias maxime ducimus illum quaerat fugiat, modi rem voluptatum!"
+    },
+    {
+        "title": "Quos nisi ullam autem?",
+        "year": "2020",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Esse illo ea magni nesciunt corporis, praesentium consectetur eius aut iure dolor provident veniam modi facilis! Sunt rerum ducimus perferendis aut reprehenderit atque repellendus illum dolore vero quia, nemo error!"
+    },
+    {
+        "title": "Repudiandae ea incidunt beatae.",
+        "year": "2019",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Harum velit cum illum minima inventore a accusantium quaerat quae tempora! Adipisci, dolores earum hic commodi aspernatur laudantium corporis ex, architecto numquam dicta sapiente debitis ipsum suscipit optio cumque quae?"
+    },
+    {
+        "title": "Consectetur aliquid facere necessitatibus.",
+        "year": "2018",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Repudiandae, assumenda. Ipsa ipsum voluptatem necessitatibus error atque quo amet, nesciunt libero dolor exercitationem, aliquam perferendis delectus temporibus earum repellat. Ullam sunt optio ratione esse repudiandae excepturi debitis, harum labore!"
+    },
+    {
+        "title": "Voluptas perferendis excepturi fuga.",
+        "year": "2017",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Similique, saepe tenetur. Cum, delectus porro? Excepturi dolor sunt hic, quam modi odit consequuntur non eos magnam nam nemo quis consequatur id. Eos voluptates architecto similique incidunt vitae reiciendis minus."
+    },
+    {
+        "title": "Expedita mollitia quis aliquam.",
+        "year": "2015",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Voluptate earum quibusdam atque ab laboriosam molestiae magnam! Beatae fuga corporis enim delectus ducimus magnam labore consequuntur. Dolorem, veniam. Sit fuga sint odit, architecto quis omnis quibusdam assumenda. Quo, corporis!"
+    }
+]

@@ -78,3 +78,50 @@ form?.addEventListener('submit', function (event) {
     console.log(url)
     location.href = url;
 });
+
+// Lab 4: Step 1.2: Importing Project Data into the Projects Page
+export async function fetchJSON(url) {
+    try {
+        // Fetch the JSON file from the given URL
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch projects: ${response.statusText}`);
+        }
+        console.log(response)
+        const data = await response.json();
+        console.log(data)
+        return data;
+
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+    }
+}
+
+
+// Step 1.3: Creating a renderProjects Function
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
+    // write javascript that will allow dynamic heading levels based on previous function
+    const headingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+    const dynamicHeadingLevel = headingLevels.includes(headingLevel) ? headingLevel: 'h2';
+
+    containerElement.innerHTML = '';
+    for (let p of project) {
+        const article = document.createElement('article');
+        article.innerHTML = `
+            <h3>${p.title}</h3>
+            <img src="${p.image}" alt="${p.title}">
+            <p>${p.description}</p>
+        `;
+        containerElement.appendChild(article);
+    }
+
+    const projectstitle = document.querySelector('.projects-title');
+    if (projectstitle) {
+        projectstitle.textContent = `${project.length} Projects`;
+    }
+}
+
+// Lab 4: Step 3.2: Fetching the data with Javascript
+export async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+}
