@@ -33,6 +33,7 @@ function renderPieChart(projectsGiven) {
     });
     // re-calculate slice generator, arc data, arc, etc.
     let sliceGenerator = d3.pie().value((d) => d.value);
+    
     let arcData = sliceGenerator(data);
     let arcs = arcData.map((d) => arcGenerator(d));
     let colors = d3.scaleOrdinal(d3.schemeTableau10);
@@ -48,12 +49,12 @@ function renderPieChart(projectsGiven) {
             svg
               .selectAll('path')
               .attr('class', (_, idx) => (
-                idx === selectedIndex ? 'selected' : null
+                idx === selectedIndex ? 'selected' : ''
               ));
             legend
               .selectAll('li')
               .attr('class', (_, idx) => (
-                idx === selectedIndex ? 'selected' : null
+                idx === selectedIndex ? 'selected' : ''
               ));
             if (selectedIndex === -1) {
                 renderProjects(projects, projectsContainer, 'h2');
@@ -69,7 +70,27 @@ function renderPieChart(projectsGiven) {
         legend.append('li')
               .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
               .attr('class', 'legend-element')
-              .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
+              .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`) // set the inner html of <li>
+              .on('click', () => {
+                selectedIndex = selectedIndex === idx ? -1 : idx;
+                
+                svg
+                  .selectAll('path')
+                  .attr('class', (_, idx) => (
+                    idx === selectedIndex ? 'selected' : null
+                  ));
+                legend
+                  .selectAll('li')
+                  .attr('class', (_, idx) => (
+                    idx === selectedIndex ? 'selected' : null
+                  ));
+                if (selectedIndex === -1) {
+                    renderProjects(projects, projectsContainer, 'h2');
+                } else {
+                    let selectedYear = data[selectedIndex].label;
+                    let filteredProjects = projects.filter(project => project.year === selectedYear);
+                    renderProjects(filteredProjects, projectsContainer, 'h2');}
+             });
     });
 }
   
