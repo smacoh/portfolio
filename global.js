@@ -1,7 +1,7 @@
 console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
-  return Array.from(context.querySelectorAll(selector));
+    return Array.from(context.querySelectorAll(selector));
 }
 
 let pages = [
@@ -9,6 +9,7 @@ let pages = [
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
+    { url: 'meta/', title: 'Meta' },
     { url: 'https://github.com/smacoh', title: 'Github Profile' }
 ];
 
@@ -19,7 +20,7 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home');
 
 for (let p of pages) {
     let url = p.url;
-    
+
     if (!ARE_WE_HOME && !url.startsWith('http')) {
         url = '../' + url;
     }
@@ -34,15 +35,15 @@ for (let p of pages) {
         a.classList.add('current');
     }
     if (a.host != location.host) {
-        a.target ="_blank"
+        a.target = "_blank"
     }
 }
 
 
 const automaticDarkLight = matchMedia("(prefers-color-scheme: dark)").matches ? "Automatic (Dark)" : "Automatic (Light)";
 document.body.insertAdjacentHTML(
-  'afterbegin',
-  `
+    'afterbegin',
+    `
   <label class="color-scheme">
     Theme:
         <select>
@@ -102,7 +103,7 @@ export async function fetchJSON(url) {
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
     // write javascript that will allow dynamic heading levels based on previous function
     const headingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-    const dynamicHeadingLevel = headingLevels.includes(headingLevel) ? headingLevel: 'h2';
+    const dynamicHeadingLevel = headingLevels.includes(headingLevel) ? headingLevel : 'h2';
 
     containerElement.innerHTML = '';
     for (let p of project) {
