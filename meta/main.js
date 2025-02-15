@@ -301,4 +301,4 @@ function updateLanguageBreakdown() {
     }
 
     return breakdown;
-}
+} 
