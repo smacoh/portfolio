@@ -1,27 +1,42 @@
+/* Global Styles */
 html {
   --color-accent: oklch(65% 50% 0);
-  accent-color: var(--color-accent);
   color-scheme: light dark;
+  accent-color: var(--color-accent);
 }
 
 body {
-  /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
   font: 100%/1.5 system-ui;
   max-width: 100ch;
-  /* margin-inline: auto; */
   margin-inline: max(1em, (100% - 100ch) / 2);
-  /* padding-left: 2ch; */
 }
 
+/* Navigation */
 nav {
   --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 0.5em;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+}
+
+a.current {
+  border-bottom: 0.4em solid oklch(80% 3% 200);
+  padding-bottom: 0;
+  font-weight: bold;
+}
+
+a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 ul {
@@ -32,26 +47,7 @@ li {
   display: contents;
 }
 
-a {
-  flex: 1;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 0.5em;
-}
-
-a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0em;
-  font-weight: bold;
-}
-
-a:hover {
-  border-bottom: 0.4em solid var(--color-accent);
-  padding-bottom: 0em;
-  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-}
-
+/* Forms */
 form {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -76,6 +72,7 @@ button {
   font-size: 80%;
 }
 
+/* Projects Section */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -93,6 +90,23 @@ button {
   margin: 0;
 }
 
+.projects img {
+  width: 100%;
+  /* Make the images fill their container */
+  height: 200px;
+  /* Set a fixed height for the images */
+  object-fit: cover;
+  /* Ensure the image covers the area without distortion */
+  border-radius: 8px;
+  /* Optional: Add rounded corners to the images */
+}
+
+.project-year {
+  font-family: Baskerville;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* Headings */
 h1 {
   font-size: 400%;
 }
@@ -107,6 +121,7 @@ h6 {
   text-wrap: balance;
 }
 
+/* Resume and CV */
 #cv article,
 #resume article {
   border-bottom: 1px solid oklch(50% 10% 200 / 40%);
@@ -128,6 +143,7 @@ h6 {
   font-family: inherit;
 }
 
+/* Profile Stats */
 #profile-stats dl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -147,45 +163,19 @@ h6 {
   justify-items: center;
 }
 
-.projects img {
-  width: 100%;
-  /* Make the images fill their container */
-  height: 200px;
-  /* Set a fixed height for the images */
-  object-fit: cover;
-  /* Ensure the image covers the area without distortion */
-  border-radius: 8px;
-  /* Optional: Add rounded corners to the images */
-}
-
-.project-year {
-  font-family: Baskerville;
-  font-variant-numeric: oldstyle-nums;
-}
-
+/* Pie Plot */
 #projects-pie-plot {
   max-width: 20em;
   margin-block: 2em;
-
   /* overflow: visible; */
 }
 
-.swatch {
-  width: 1em;
-  height: 1em;
-  aspect-ratio: 1 / 1;
-  background-color: var(--color);
-  border-radius: 50%;
-  display: inline-block;
-}
-
+/* Legend */
 .legend {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
   list-style: none;
-  padding: 0;
-  margin-top: 1em;
   padding: 1em;
   margin: 1em 0;
   border: 1px solid oklch(50% 10% 200 / 40%);
@@ -205,6 +195,16 @@ h6 {
   cursor: pointer;
 }
 
+.swatch {
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Container and Search Bar */
 .container {
   display: flex;
   align-items: center;
@@ -221,13 +221,9 @@ h6 {
   margin: 10px auto;
 }
 
-&:has(path:hover) {
-  path:not(:hover) {
-    opacity: 0.5;
-  }
-}
-
+/* Path and Selection Styles */
 path {
+  cursor: pointer;
   transition: 300ms;
 }
 
@@ -239,11 +235,13 @@ path {
   }
 }
 
-
-path {
-  cursor: pointer;
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
 }
 
+/* Stats */
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -269,12 +267,13 @@ path {
   font-size: 25px;
 }
 
+/* Gridlines */
 .gridlines line {
   stroke-opacity: 0.3;
   stroke-width: .5;
 }
 
-
+/* Info Display */
 dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -297,11 +296,11 @@ dl.info dd {
   margin: 0;
 }
 
+/* Tooltip */
 .tooltip {
   position: fixed;
   top: 1em;
   left: 1em;
-  /* background-color: rgba(255, 255, 255, 0.8); */
   box-shadow: 2px 2px 10px #7d7d7d;
   border-radius: 5px;
   backdrop-filter: blur(5px);
@@ -310,10 +309,15 @@ dl.info dd {
   padding: 10px;
 }
 
+/* Circle Styles */
 circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  @starting-style {
+    r: 0;
+    transition: all 200ms, r calc(var(--r) * 100ms);
+  }
 }
 
 circle:hover {
@@ -339,7 +343,175 @@ circle.selected {
   animation: marching-ants 2s linear infinite;
 }
 
+/* Language Breakdown */
 #language-breakdown {
-  padding-bottom: 200px; /* Adjust the value as needed */
+  padding-bottom: 200px;
+  /* Adjust the value as needed */
 }
 
+/* Filter Container */
+#filter-container {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+}
+
+#selectedTime {
+  margin-left: auto;
+}
+
+/* Files Section */
+.files {
+  display: grid;
+  grid-template-columns: 200px auto;
+  gap: 4px;
+}
+
+.files>div {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: auto;
+}
+
+.files dt {
+  grid-column: 1;
+  margin: 0;
+}
+
+.files dt small {
+  display: block;
+  font-size: 0.8em;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.line {
+  display: flex;
+  width: 0.5em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+/* Commit Filter */
+#commit-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#commit-filter label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#commit-filter input[type="range"] {
+  flex-grow: 1;
+}
+
+#commit-filter time {
+  align-self: flex-end;
+}
+
+/* Meta Page */
+.meta-page {
+  max-width: min(120ch, 80vw);
+}
+
+/* Scrollytelling Sections */
+#files-scrollytelling,
+#scrollytelling {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#file-scroll-container,
+#scroll-container {
+  position: relative;
+  width: 95%;
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+#file-spacer,
+#spacer {
+  width: 100%;
+  background: none;
+  pointer-events: none;
+}
+
+#file-items-container,
+#items-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#chart {
+  grid-column: 2;
+}
+
+.item,
+.file-item {
+  height: 120px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #eee;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.item:hover,
+.file-item:hover {
+  background-color: #f0f0f0;
+}
+
+.item p,
+.file-item p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Scroll Indicator */
+#scroll-indicator {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

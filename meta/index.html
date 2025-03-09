@@ -9,21 +9,34 @@
   <script type="module" src="../global.js"></script>
   <script type="module" src="main.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-
 </head>
 
 <body>
   <h1>Meta</h1>
   <p>This page includes stats about the code of this website.</p>
-  <div id="stats"></div>
+  <h2>Files By Commits</h2>
+  <div id="files-scrollytelling">
+    <dl class="files"></dl>
+    <div id="file-scroll-container">
+      <div id="file-spacer"></div>
+      <div id="file-items-container"></div>
+    </div>
+  </div>
   <h2>Commits by time of day</h2>
-  <div id="chart"></div>
+  <div id="stats"></div>
+  <div id="scrollytelling">
+    <div id="scroll-container">
+      <div id="spacer"></div>
+      <div id="items-container"></div>
+    </div>
+    <div id="chart"></div>
+  </div>
   <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
     <dd>
       <a href="" id="commit-link" target="_blank"></a>
     </dd>
-  
+
     <dt>Date</dt>
     <dd id="commit-date"></dd>
 
@@ -33,14 +46,14 @@
     <dt>Author</dt>
     <dd id="commit-author"></dd>
 
-    <dt>Lines</dt>
-    <dd id="commit-lines"></dd>
-  
+    <dt>Lines Edited</dt>
+    <dd id="commit-lines-edited"></dd>
+
     <!-- Add: Time, author, lines edited -->
   </dl>
   <p id="selection-count">No commits selected</p>
   <dl id="language-breakdown" class="stats"></dl>
-  
+
 
 </body>
 
