@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p>
             On ${commit.datetime.toLocaleString("en", { dateStyle: "short", timeStyle: "short" })}, I made changes to 
             <a href="${commit.url}" style="text-decoration:none; color:#0000EE;" target="_blank">
-                ${index > 0 ? 'several files' : 'the initial set of files'}.
+                ${index > 0 ? 'files' : 'the initial set of files'}.
             </a> This commit affected ${d3.rollups(commit.lines, D => D.length, d => d.file).length} files, including 
             ${d3.rollups(commit.lines, D => D.length, d => d.type).map(([type, count]) => `${count} ${type} lines`).join(', ')}.
             ${newFilesText} The changes were aimed at optimizing the code structure and improving maintainability.
